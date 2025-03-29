@@ -75,7 +75,7 @@ export default function Navigation() {
         <Button
           color="gray"
           size="sm"
-          className="h-8 w-8 cursor-pointer rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-900 dark:hover:bg-gray-700"
+          className="size-8 cursor-pointer rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-900 dark:hover:bg-gray-700"
           onClick={() => setIsOpen(true)}
         >
           <GiHamburgerMenu />
@@ -90,6 +90,7 @@ export default function Navigation() {
             <div className="flex flex-col gap-4">
               {links.map((link) => (
                 <Link
+                  key={link.label}
                   href={link.href}
                   onClick={handleClose}
                   className="flex items-center gap-2 rounded-md px-2 text-sm hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400 sm:text-lg"
@@ -99,31 +100,6 @@ export default function Navigation() {
                 </Link>
               ))}
             </div>
-            {/* <SidebarItemGroup onClick={handleClose}>
-                <SidebarItem icon={HiHome} href="/">
-                  Home
-                </SidebarItem>
-
-                <SidebarItem icon={GiLargeDress} href="/attire">
-                  Attire
-                </SidebarItem>
-                <SidebarItem icon={IoRoseSharp} href="/18-roses">
-                  18 Roses
-                </SidebarItem>
-                <SidebarItem icon={GiOpenTreasureChest}>
-                  <Link href="/18-treasures">18 Treasures</Link>
-                </SidebarItem>
-                <SidebarItem icon={LiaMoneyBillWaveAltSolid}>
-                  <Link href="/18-yellow-bills">18 Yellow Bills</Link>
-                </SidebarItem>
-                <SidebarItem icon={PiMoneyWavyFill}>
-                  <Link href="/18-blue-bills">18 Blue Bills</Link>
-                </SidebarItem>
-                <SidebarItem icon={TfiGallery}>
-                  <Link href="/gallery">Gallery</Link>
-                </SidebarItem>
-              </SidebarItemGroup> */}
-            {/* </SidebarItems> */}
           </Sidebar>
         </DrawerItems>
       </Drawer>
