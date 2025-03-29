@@ -2,6 +2,7 @@ import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navigation from "./_components/Navigation";
 
 export const metadata: Metadata = {
   title: "Mae @ 18th",
@@ -23,7 +24,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex min-h-screen flex-col antialiased`}
       >
-        {children}
+        <Navigation />
+        <div className="flex-1  dark:bg-gray-800">{children}</div>
       </body>
     </html>
   );

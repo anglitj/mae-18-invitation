@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Page() {
-  return <div>Attire Page</div>;
+  return (
+    <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-900">
+      Attire Page
+    </main>
+  );
 }

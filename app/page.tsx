@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Navigation from "./_components/Navigation";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-900">
-      <Navigation />
       <div className="flex h-full flex-col items-center justify-center gap-20">
         <h3 className="text-center text-lg font-semibold uppercase text-gray-800 dark:text-gray-300 lg:text-2xl">
           Join us to celebrate
@@ -13,9 +11,10 @@ export default function Home() {
           <h3 className="text-4xl font-bold">at</h3>
           <h1 className="text-4xl font-bold">18</h1>
         </div>
-        <div className="flex flex-col items-center justify-center font-semibold text-gray-800 dark:text-gray-300 md:text-lg lg:text-2xl">
+        <div className="flex flex-row items-center justify-center gap-4 font-semibold text-gray-800 dark:text-gray-300 md:text-lg lg:text-2xl">
           <p>March 27, 2025</p>
-          <p>10 PM</p>
+          <p>|</p>
+          <p>5 PM</p>
         </div>
         <div className="cursor-pointer text-center font-semibold uppercase text-gray-800 underline hover:text-cyan-800 dark:text-gray-100 dark:hover:text-cyan-400 md:text-lg lg:text-2xl">
           <Link
