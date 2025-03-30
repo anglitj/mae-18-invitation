@@ -19,7 +19,7 @@ export default function NameList({ names, title }: NameListProps) {
         {names.map((name, index) => (
           <li
             key={index}
-            className="mx-16 rounded-lg bg-gray-800 p-2 text-center text-2xl text-gray-100 shadow-sm transition-shadow duration-100 hover:shadow-md sm:mx-0 sm:p-4 sm:text-3xl"
+            className="mx-12 rounded-lg bg-gray-800 p-2 text-center text-2xl text-gray-100 shadow-sm transition-shadow duration-100 hover:shadow-md sm:mx-0 sm:p-4 sm:text-3xl"
           >
             {name}
           </li>
