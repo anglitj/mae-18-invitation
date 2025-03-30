@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${inter.className} flex min-h-screen flex-col antialiased`}
       >
         <Navigation />
-        <div className="flex-1  dark:bg-gray-800">{children}</div>
+        <div className="flex-1  dark:bg-gray-700">{children}</div>
       </body>
     </html>
   );

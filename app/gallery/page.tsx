@@ -38,7 +38,7 @@ export default function Page() {
   const currentImages = getBatchImages(currentBatch);
 
   return (
-    <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-900">
+    <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="container mx-auto">
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-4">

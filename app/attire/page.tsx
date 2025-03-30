@@ -20,7 +20,7 @@ export default function Page() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-900">
+    <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="container mx-auto">
         <h1 className="mb-12 text-center text-3xl font-bold text-gray-900 dark:text-white">
           Attire Requirements
