@@ -19,7 +19,7 @@ const names = {
     "Shane Lloyd Bejo",
     "Axel Aaron Bruzo",
     "Dustin Reyes",
-    "Kendrick Vargas (ESCORT)",
+    "Kendrick Vargas",
   ],
   treasures: [
     "Missy Lambot",
