@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
+//Flowbite components
 import {
   Button,
   DarkThemeToggle,
@@ -8,19 +11,17 @@ import {
   DrawerHeader,
   DrawerItems,
   Sidebar,
-  SidebarItem,
-  SidebarItemGroup,
-  SidebarItems,
 } from "flowbite-react";
 
+// Icons
 import { GiHamburgerMenu, GiOpenTreasureChest } from "react-icons/gi";
-import { HiHome } from "react-icons/hi";
+import { HiHome, HiQuestionMarkCircle } from "react-icons/hi";
 import { IoRoseSharp } from "react-icons/io5";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 import { PiMoneyWavyFill } from "react-icons/pi";
 import { TfiGallery } from "react-icons/tfi";
 import { GiLargeDress } from "react-icons/gi";
-import Link from "next/link";
+import { MdInsertInvitation } from "react-icons/md";
 
 const links = [
   {
@@ -57,6 +58,16 @@ const links = [
     href: "/gallery",
     label: "Gallery",
     icon: TfiGallery,
+  },
+  {
+    href: "/rsvp",
+    label: "RSVP",
+    icon: MdInsertInvitation,
+  },
+  {
+    href: "/faqs",
+    label: "FAQs",
+    icon: HiQuestionMarkCircle,
   },
 ];
 
