@@ -75,7 +75,7 @@ export default function Navigation() {
         <Button
           color="gray"
           size="sm"
-          className="size-8 cursor-pointer rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-900 dark:hover:bg-gray-700"
+          className="flex size-10 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-900 dark:hover:bg-gray-700"
           onClick={() => setIsOpen(true)}
         >
           <GiHamburgerMenu />
