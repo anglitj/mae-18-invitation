@@ -1,16 +1,24 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
-import menRosesSample1 from "@/public/attire/18-roses-men-1.jpg";
-import menRosesSample2 from "@/public/attire/18-roses-men-2.jpg";
-import allGuestMenSample1 from "@/public/attire/all-guest-men-1.jpg";
-import allGuestMenSample2 from "@/public/attire/all-guest-men-2.jpg";
-import allGuestMenSample3 from "@/public/attire/all-guest-men-3.jpg";
-import allGuestWomenSample1 from "@/public/attire/all-guest-women-1.jpg";
-import allGuestWomenSample2 from "@/public/attire/all-guest-women-2.jpg";
-import allGuestWomenSample3 from "@/public/attire/all-guest-women-3.jpg";
+import React, { useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import ModalImage from "../_components/ModalImage";
+import { imageList } from "./imageList";
 
 export default function Page() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: StaticImageData;
+    alt: string;
+  } | null>(null);
+
+  const handleImageClick = (src: StaticImageData, alt: string) => {
+    setSelectedImage({ src, alt });
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-900">
       <div className="container mx-auto">
@@ -26,8 +34,8 @@ export default function Page() {
           <div className="mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800">
             <p className="text-lg text-gray-800 dark:text-gray-200">
               Required to wear an{" "}
-              <span className="font-bold underline"> all white</span> outfit
-              from head to toe.
+              <span className="font-bold uppercase underline"> all white</span>{" "}
+              outfit from head to toe.
             </p>
           </div>
 
@@ -38,33 +46,21 @@ export default function Page() {
                 Men&apos;s Sample Outfits
               </h3>
               <div className="grid grid-cols-1 gap-4">
-                <div className="relative h-96 w-full">
-                  <Image
-                    src={allGuestMenSample1}
-                    alt="Men's white outfit sample 1"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div className="relative h-96 w-full">
-                  <Image
-                    src={allGuestMenSample2}
-                    alt="Men's white outfit sample 2"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div className="relative h-96 w-full">
-                  <Image
-                    src={allGuestMenSample3}
-                    alt="Men's white outfit sample 3"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
+                {imageList.allGuestMen.images.map((image) => (
+                  <div
+                    key={image.name}
+                    className="relative h-96 w-full cursor-pointer transition-transform hover:scale-[1.02]"
+                    onClick={() => handleImageClick(image.src, image.name)}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.name}
+                      fill
+                      className="rounded-lg object-cover"
+                      placeholder="blur"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -74,33 +70,21 @@ export default function Page() {
                 Women&apos;s Sample Outfits
               </h3>
               <div className="grid grid-cols-1 gap-4">
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={allGuestWomenSample1}
-                    alt="Women's white outfit sample 1"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={allGuestWomenSample2}
-                    alt="Women's white outfit sample 2"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={allGuestWomenSample3}
-                    alt="Women's white outfit sample 3"
-                    fill
-                    className="rounded-lg object-cover"
-                    placeholder="blur"
-                  />
-                </div>
+                {imageList.allGuestWomen.images.map((image) => (
+                  <div
+                    key={image.name}
+                    className="relative h-96 w-full cursor-pointer transition-transform hover:scale-[1.02]"
+                    onClick={() => handleImageClick(image.src, image.name)}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.name}
+                      fill
+                      className="rounded-lg object-cover"
+                      placeholder="blur"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -118,27 +102,34 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="relative h-96 w-full">
-              <Image
-                src={menRosesSample1}
-                alt="18 Roses outfit sample 1"
-                placeholder="blur"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <div className="relative h-96 w-full">
-              <Image
-                src={menRosesSample2}
-                alt="18 Roses outfit sample 2"
-                placeholder="blur"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
+            {imageList.rose.images.map((image) => (
+              <div
+                key={image.name}
+                className="relative h-96 w-full cursor-pointer transition-transform hover:scale-[1.02]"
+                onClick={() => handleImageClick(image.src, image.name)}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.name}
+                  placeholder="blur"
+                  fill
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            ))}
           </div>
         </section>
       </div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <ModalImage
+          isOpen={!!selectedImage}
+          onClose={handleCloseModal}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+        />
+      )}
     </main>
   );
 }
