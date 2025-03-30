@@ -93,7 +93,7 @@ export default function Navigation() {
                   key={link.label}
                   href={link.href}
                   onClick={handleClose}
-                  className="flex items-center gap-2 rounded-md px-2 text-sm hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400 sm:text-lg"
+                  className="flex items-center gap-2 rounded-md px-2 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400 sm:text-lg"
                 >
                   <link.icon />
                   {link.label}
