@@ -66,7 +66,7 @@ export default function Navigation() {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <>
+    <nav className="fixed inset-x-0 top-0 z-50">
       <div className="absolute right-4 top-4 flex w-10 items-center justify-center rounded-md">
         <DarkThemeToggle />
       </div>
@@ -103,6 +103,6 @@ export default function Navigation() {
           </Sidebar>
         </DrawerItems>
       </Drawer>
-    </>
+    </nav>
   );
 }
