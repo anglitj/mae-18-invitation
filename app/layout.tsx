@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <ThemeModeScript />
+        <ThemeModeScript mode="dark" />
       </head>
       <body
         className={`${inter.className} flex min-h-screen flex-col antialiased`}
