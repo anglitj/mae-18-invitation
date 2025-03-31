@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import ModalImage from "../_components/ModalImage";
 import { imageList } from "./imageList";
+import PageTitle from "../_components/PageTitle";
 
 export default function Page() {
   const [selectedImage, setSelectedImage] = useState<{
@@ -22,12 +23,10 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="container mx-auto">
-        <h1 className="mb-12 text-center text-3xl font-bold text-gray-900 dark:text-white">
-          Attire Requirements
-        </h1>
+        <PageTitle title="Attire Requirements" />
 
         {/* All Guests Section */}
-        <section className="mb-16">
+        <section>
           <h2 className="mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
             All Guests
           </h2>
@@ -91,12 +90,12 @@ export default function Page() {
         </section>
 
         {/* 18 Roses Section */}
-        <section>
+        <section className="mt-12">
           <h2 className="mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
             18 Roses
           </h2>
           <div className="mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800">
-            <p className=" text-lg text-gray-800 dark:text-gray-200">
+            <p className="text-lg text-gray-800 dark:text-gray-200">
               White long sleeves is required.
             </p>
           </div>

@@ -1,4 +1,7 @@
 import { Imperial_Script } from "next/font/google";
+import { FaFeatherAlt } from "react-icons/fa";
+import { GiFeather } from "react-icons/gi";
+import { IoEllipse } from "react-icons/io5";
 
 const imperialScript = Imperial_Script({
   weight: "400",
@@ -14,7 +17,7 @@ const faqs = [
   {
     question: "What is the dress code?",
     answer:
-      "The dress code is casual attire all white (from head to toe). You can check attire section for more details.",
+      "All guests are required to wear an ALL WHITE ATTIRE. You can check attire section for more details.",
   },
   {
     question: "What time should I arrive?",
@@ -28,8 +31,7 @@ const faqs = [
   },
   {
     question: "Can I bring a plus one?",
-    answer:
-      "Please check your invitation for the number of guests allowed. If you have any questions, feel free to contact us.",
+    answer: "Only one companion/PLUS ONE is allowed.",
   },
   {
     question: "Will there be food and drinks?",
@@ -52,31 +54,44 @@ export default function FAQs() {
   return (
     <main className="min-h-screen bg-white px-4 py-16 dark:bg-gray-700">
       <div className="mx-auto max-w-4xl">
-        <h1
-          className={`${imperialScript.className} mb-12 text-center text-5xl text-gray-800 dark:text-white`}
-        >
-          Frequently Asked Questions
-        </h1>
+        <div className="relative mb-12">
+          {/* <IoEllipse className="absolute -left-8 -top-8 size-16 text-gray-200 dark:text-gray-600" />
+          <FaFeatherAlt className="absolute -left-12 -top-4 size-6 rotate-45 text-gray-300 dark:text-gray-500" /> */}
+          <h1
+            className={`${imperialScript.className} relative flex items-center justify-center gap-3 text-5xl text-gray-800 dark:text-white`}
+          >
+            <FaFeatherAlt className="size-8" />
+            Frequently Asked Questions
+            <FaFeatherAlt className="size-8" />
+          </h1>
+        </div>
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-600 dark:bg-gray-800"
+              className="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-600 dark:bg-gray-800"
             >
-              <h2 className="mb-3 text-xl font-semibold text-gray-800 dark:text-white">
+              <IoEllipse className="absolute -left-4 -top-4 size-8 text-gray-100 dark:text-gray-700" />
+              <h2 className="mb-3 flex items-center gap-3 text-xl font-semibold text-gray-800 dark:text-white">
+                <GiFeather className="size-6" />
                 {faq.question}
               </h2>
               <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
+              <IoEllipse className="absolute -bottom-4 -right-4 size-8 text-gray-100 dark:text-gray-700" />
             </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 dark:text-gray-300">
-            Still have questions? Feel free to contact us for any additional
-            information.
-          </p>
+          <div className="relative inline-block">
+            <FaFeatherAlt className="absolute -left-6 -top-2 size-4 rotate-45 text-gray-300 dark:text-gray-500" />
+            <p className="text-gray-600 dark:text-gray-300">
+              Still have questions? Feel free to contact us for any additional
+              information.
+            </p>
+            <FaFeatherAlt className="absolute -bottom-2 -right-6 size-4 -rotate-45 text-gray-300 dark:text-gray-500" />
+          </div>
         </div>
       </div>
     </main>

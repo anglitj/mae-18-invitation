@@ -1,4 +1,5 @@
 import NameList from "../_components/NameList";
+import PageTitle from "../_components/PageTitle";
 
 const names = {
   roses: [
@@ -21,70 +22,15 @@ const names = {
     "Dustin Reyes",
     "Kendrick Vargas",
   ],
-  treasures: [
-    "Missy Lambot",
-    "Myth Aera Lambot",
-    "Kristof Lambot",
-    "Cristine Lambot",
-    "Daniela Damian",
-    "Irish De Rama",
-    "Marcicon Anglit",
-    "Evelyn Del Mundo",
-    "Kathlyn Kate Hernandez",
-    "Aaliyah Stephanie Sombilon",
-    "Chierra Mae Concepcion",
-    "Anne Bernadeth Mejino",
-    "Rhianna Andrei Labio",
-    "Francheska Pucyutan",
-    "Alexandra Visperas",
-    "Jazzmeen Mundin",
-    "Margarette Laas",
-    "Cyrine Manalo",
-  ],
-  yellowBills: [
-    "Mary Jane Lambot",
-    "Kamille Moreno",
-    "Melaica Constantino",
-    "Maryknoll Lizano",
-    "Michelle Domingo",
-    "Zyreeh Empleo",
-    "Gilbert Lizano",
-    "Jun Damian",
-    "Frysthine Anglit - Sarmiento",
-    "Lovely Torres - Ochoa",
-    "Ester Torres",
-    "Shanea Hudieras",
-    "Marife Baylon",
-    "Jericho Agapito",
-    "Kuya Rodel",
-    "Sir Pulis",
-  ],
-  blueBills: [
-    "Rowena Lambot",
-    "Marru Lambot - Anglit",
-    "Jem Mar Anglit",
-    "Ronalie Lambot",
-    "Mila Lambot - Moreno",
-    "Gener Lambot",
-    "Amado Lambot",
-    "Thess Lambot - Domingo",
-    "Glo Potencio - Lizano",
-    "Randy Lizano",
-    "Cristy Lizano - Empleo",
-    "Connie Anglit",
-    "Ninong Buboy Fumera",
-    "Ninong Mawe Gabitanan",
-    "Ninong Greg De Guzman",
-    "Ninang Imelda Sarmiento",
-    "Doc. Alexander Lim",
-    "Doc Aireen Boguiro",
-  ],
 };
 
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
-      <NameList names={names.roses} title="18 Roses" />
+      <div className="mx-auto w-full max-w-4xl">
+        <PageTitle title="18 Roses" />
+        <NameList names={names.roses} title="18 Roses" />
+      </div>
     </main>
   );
 }

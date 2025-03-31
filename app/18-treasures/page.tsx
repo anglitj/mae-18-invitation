@@ -1,14 +1,15 @@
 import React from "react";
 import NameList from "../_components/NameList";
+import PageTitle from "../_components/PageTitle";
 
 const names = {
   treasures: [
     "Missy Lambot",
     "Myth Aera Lambot",
     "Kristof Lambot",
-    "Cristine Lambot",
     "Daniela Damian",
     "Irish De Rama",
+    "Euna Marie Vidad",
     "Marcicon Anglit",
     "Evelyn Del Mundo",
     "Kathlyn Kate Hernandez",
@@ -27,7 +28,10 @@ const names = {
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
-      <NameList names={names.treasures} title="18 Treasures" />
+      <div className="mx-auto w-full max-w-4xl">
+        <PageTitle title="18 Treasures" />
+        <NameList names={names.treasures} title="18 Treasures" />
+      </div>
     </main>
   );
 }

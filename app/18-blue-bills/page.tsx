@@ -1,12 +1,9 @@
 import React from "react";
 import NameList from "../_components/NameList";
+import PageTitle from "../_components/PageTitle";
 
 const names = {
   blueBills: [
-    "Rowena Lambot",
-    "Marru Lambot - Anglit",
-    "Jem Mar Anglit",
-    "Ronalie Lambot",
     "Mila Lambot - Moreno",
     "Gener Lambot",
     "Amado Lambot",
@@ -14,20 +11,27 @@ const names = {
     "Glo Potencio - Lizano",
     "Randy Lizano",
     "Cristy Lizano - Empleo",
-    "Connie Anglit",
+    "Eric John Lavina",
+    "Denia Pizarra",
+    "Doc. Alexander Lim",
+    "Doc Aireen Boguiro",
+    "PMSg Jess Hinog",
+    "Gudufredo Calanuga",
+    "Ninong Imelda Sarmiento",
+    "Ninong Mabel Reyes",
     "Ninong Buboy Fumera",
     "Ninong Mawe Gabitanan",
     "Ninong Greg De Guzman",
-    "Ninang Imelda Sarmiento",
-    "Doc. Alexander Lim",
-    "Doc Aireen Boguiro",
   ],
 };
 
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
-      <NameList names={names.blueBills} title="18 Blue Bills" />
+      <div className="mx-auto w-full max-w-4xl">
+        <PageTitle title="18 Blue Bills" />
+        <NameList names={names.blueBills} title="18 Blue Bills" />
+      </div>
     </main>
   );
 }

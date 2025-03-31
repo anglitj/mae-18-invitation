@@ -5,6 +5,7 @@ import { useState, useCallback, useEffect } from "react";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { HiArrowUp } from "react-icons/hi";
 import { imageList } from "./imageList";
+import PageTitle from "../_components/PageTitle";
 
 const IMAGES_PER_BATCH = 5;
 
@@ -39,13 +40,9 @@ export default function Page() {
 
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
-      <div className="container mx-auto">
+      <div className="mx-auto w-full max-w-4xl">
         <div className="mb-8 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-              Gallery
-            </h1>
-          </div>
+          <PageTitle title="Gallery" showEclipse={false} />
           <button
             onClick={handleNextBatch}
             className="flex items-center justify-center rounded-lg bg-gray-500 px-4 py-2 text-white transition-colors hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
