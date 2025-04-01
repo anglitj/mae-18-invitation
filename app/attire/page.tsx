@@ -6,6 +6,13 @@ import ModalImage from "../_components/ModalImage";
 import { imageList } from "./imageList";
 import PageTitle from "../_components/PageTitle";
 
+import { Delius_Swash_Caps } from "next/font/google";
+
+const deliusSwashCaps = Delius_Swash_Caps({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function Page() {
   const [selectedImage, setSelectedImage] = useState<{
     src: StaticImageData;
@@ -27,21 +34,32 @@ export default function Page() {
 
         {/* All Guests Section */}
         <section>
-          <h2 className="mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+          <h2
+            className={`${deliusSwashCaps.className} mb-6 text-2xl font-semibold text-gray-900 dark:text-white`}
+          >
             All Guests
           </h2>
-          <div className="mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800">
-            <p className="text-lg text-gray-800 dark:text-gray-200">
-              Required to wear an{" "}
-              <span className="font-bold uppercase underline"> all white</span>{" "}
-              outfit from head to toe.
+          <div
+            className={`${deliusSwashCaps.className} mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800`}
+          >
+            <p className="text-sm text-gray-800 dark:text-gray-200">
+              To fully embody the ethereal beauty of the Swan Eclipse, we kindly
+              request all guests to wear an{" "}
+              <span
+                className={`text-base font-semibold underline underline-offset-4`}
+              >
+                all white
+              </span>{" "}
+              outfit, from head to toe.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Men's Samples */}
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3
+                className={`${deliusSwashCaps.className} mb-4 text-lg font-semibold text-gray-900 dark:text-white`}
+              >
                 Men&apos;s Sample Outfits
               </h3>
               <div className="grid grid-cols-1 gap-4">
@@ -65,7 +83,9 @@ export default function Page() {
 
             {/* Women's Samples */}
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3
+                className={`${deliusSwashCaps.className} mb-4 text-lg font-semibold text-gray-900 dark:text-white`}
+              >
                 Women&apos;s Sample Outfits
               </h3>
               <div className="grid grid-cols-1 gap-4">
@@ -91,10 +111,14 @@ export default function Page() {
 
         {/* 18 Roses Section */}
         <section className="mt-12">
-          <h2 className="mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+          <h2
+            className={`${deliusSwashCaps.className} mb-6 text-2xl font-semibold text-gray-900 dark:text-white`}
+          >
             18 Roses
           </h2>
-          <div className="mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800">
+          <div
+            className={`${deliusSwashCaps.className} mb-8 rounded-lg bg-yellow-50 p-6 dark:bg-gray-800`}
+          >
             <p className="text-lg text-gray-800 dark:text-gray-200">
               White long sleeves is required.
             </p>

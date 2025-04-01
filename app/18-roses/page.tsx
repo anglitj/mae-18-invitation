@@ -24,12 +24,15 @@ const names = {
   ],
 };
 
+const message =
+  "Like the swan emerging from shadow, each rose marks a step towards radiant womanhood.";
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="mx-auto w-full max-w-4xl">
-        <PageTitle title="18 Roses" />
-        <NameList names={names.roses} title="18 Roses" />
+        <PageTitle title="18 Roses" message={message} />
+        <NameList names={names.roses} />
       </div>
     </main>
   );

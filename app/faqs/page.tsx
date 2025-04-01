@@ -8,6 +8,13 @@ const imperialScript = Imperial_Script({
   subsets: ["latin"],
 });
 
+import { Delius_Swash_Caps } from "next/font/google";
+
+const deliusSwashCaps = Delius_Swash_Caps({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const faqs = [
   {
     question: "Where is the event venue?",
@@ -17,7 +24,7 @@ const faqs = [
   {
     question: "What is the dress code?",
     answer:
-      "All guests are required to wear an ALL WHITE ATTIRE. You can check attire section for more details.",
+      "To fully embody the ethereal beauty of the Swan Eclipse, we kindly              request all guests to wear an all white outfit, from head to toe. You can check attire section for more details.",
   },
   {
     question: "What time should I arrive?",
@@ -33,15 +40,15 @@ const faqs = [
     question: "Can I bring a plus one?",
     answer: "Only one companion/PLUS ONE is allowed.",
   },
-  {
-    question: "Will there be food and drinks?",
-    answer:
-      "Yes, there will be a buffet dinner and drinks served during the celebration.",
-  },
+  // {
+  //   question: "Will there be food and drinks?",
+  //   answer:
+  //     "Yes, there will be a buffet dinner and drinks served during the celebration.",
+  // },
   {
     question: "Is there a gift registry?",
     answer:
-      "Your presence is the greatest gift. However, if you would like to give something, monetary gifts would be appreciated.",
+      "Your presence is the greatest gift. However, if you would like to give something, monetary gifts or something associated with Sanrio Kuromi would be appreciated.",
   },
   {
     question: "How can I RSVP?",
@@ -52,7 +59,9 @@ const faqs = [
 
 export default function FAQs() {
   return (
-    <main className="min-h-screen bg-white px-4 py-16 dark:bg-gray-700">
+    <main
+      className={`${deliusSwashCaps.className} min-h-screen bg-white px-4 py-16 dark:bg-gray-700`}
+    >
       <div className="mx-auto max-w-4xl">
         <div className="relative mb-12">
           {/* <IoEllipse className="absolute -left-8 -top-8 size-16 text-gray-200 dark:text-gray-600" />

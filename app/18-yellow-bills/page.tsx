@@ -25,12 +25,15 @@ const names = {
   ],
 };
 
+const message =
+  "Like golden rays breaking through the Swan Eclipse, these eighteen yellow bills illuminate her path to prosperity.";
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="mx-auto w-full max-w-4xl">
-        <PageTitle title="18 Yellow Bills" />
-        <NameList names={names.yellowBills} title="18 Yellow Bills" />
+        <PageTitle title="18 Yellow Bills" message={message} />
+        <NameList names={names.yellowBills} />
       </div>
     </main>
   );

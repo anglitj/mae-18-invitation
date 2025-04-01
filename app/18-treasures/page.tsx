@@ -25,12 +25,15 @@ const names = {
   ],
 };
 
+const message =
+  "These treasures, like stars in the eclipsed sky, are gifts of wisdom, love, and cherished memories.";
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="mx-auto w-full max-w-4xl">
-        <PageTitle title="18 Treasures" />
-        <NameList names={names.treasures} title="18 Treasures" />
+        <PageTitle title="18 Treasures" message={message} />
+        <NameList names={names.treasures} />
       </div>
     </main>
   );

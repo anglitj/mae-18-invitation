@@ -1,12 +1,20 @@
 import Link from "next/link";
 import PageTitle from "../_components/PageTitle";
+import { Delius_Swash_Caps } from "next/font/google";
+
+const deliusSwashCaps = Delius_Swash_Caps({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Page() {
   return (
     <main className="relative flex min-h-screen flex-col bg-white px-4 py-24 dark:bg-gray-700">
       <div className="relative mx-auto w-full max-w-4xl">
         <PageTitle title="RSVP" />
-        <p className="mb-6 text-center text-lg text-gray-600 dark:text-gray-300">
+        <p
+          className={`${deliusSwashCaps.className} mb-6 text-center text-lg text-gray-600 dark:text-gray-300`}
+        >
           Please fill out the form below to RSVP for the event. This will
           confirm your attendance.
         </p>
