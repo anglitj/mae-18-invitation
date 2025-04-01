@@ -15,7 +15,7 @@ const names = {
     "Lovely Torres - Ochoa",
     "John Michael Rodas",
     "Auntie Mareng",
-    "Racquel Clanuga",
+    "Racquel Calanuga",
     "Monique Repil",
     "PCpl Yhonor Hinog",
     "Marife Baylon",
