@@ -7,7 +7,7 @@ import { HiArrowUp } from "react-icons/hi";
 import { imageList } from "./imageList";
 import PageTitle from "../_components/PageTitle";
 
-const IMAGES_PER_BATCH = 5;
+const IMAGES_PER_BATCH = 6;
 
 const getBatchImages = (batchIndex: number) => {
   const startIndex = batchIndex * IMAGES_PER_BATCH;
