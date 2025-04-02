@@ -14,7 +14,7 @@ const names = {
     "Frysthine Anglit - Sarmiento",
     "Lovely Torres - Ochoa",
     "John Michael Rodas",
-    "Auntie Mareng",
+    "Maria T. Mazo",
     "Racquel Clanuga",
     "Monique Repil",
     "PCpl Yhonor Hinog",
