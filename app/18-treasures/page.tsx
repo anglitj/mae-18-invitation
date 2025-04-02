@@ -10,7 +10,7 @@ const names = {
     "Daniela Damian",
     "Irish De Rama",
     "Euna Marie Vidad",
-    "Marcicon Anglit",
+    "Maricon Anglit",
     "Evelyn Del Mundo",
     "Kathlyn Kate Hernandez",
     "Aaliyah Stephanie Sombilon",
